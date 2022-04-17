@@ -14,6 +14,8 @@
 <body>
     <div class="form"> 
         <div>
+        <label>AD:</label>
+        <input type="text" id="name" name="fname"><br><br> 
         </div>
          
     
