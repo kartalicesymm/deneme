@@ -15,12 +15,33 @@
         }
 
     </style>
+
+    <script>
+        
+        fetch("deneme.json").then(
+            response=>{
+                return response.json()
+            }
+        ).then(
+            responseJson=>{
+                console.log(responseJson);
+                document.getElementById("name").value=responseJson.username;
+                if(document.getElementById("name").value==null){
+                     alert(document.getElementById("name").value);
+                 } 
+            }
+        )
+        
+
+      
+    </script>
+
 </head>
 <body>
     <div class="form"> 
         <div>
         <label>AD:</label>
-        <input type="text" id="name" name="fname"><br><br> 
+        <input type="text" id="name" name="name"><br><br> 
         </div>
          
     
@@ -28,10 +49,3 @@
 </body>
 </html>
 
-
-<?php 
- 
- echo "deneme";
-
-
-?>
