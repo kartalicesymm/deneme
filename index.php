@@ -6,7 +6,8 @@
         .form{
             margin: auto;
             width: 50%;
-            border: 1 dotted grey;
+            height: 50%;
+            border: 3 dotted grey;
         }
 
     </style>
