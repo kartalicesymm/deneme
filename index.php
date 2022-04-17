@@ -8,6 +8,7 @@
             width: 50%;
             height: 50%;
             border: 3 dotted grey;
+            color: pink;
         }
 
     </style>
