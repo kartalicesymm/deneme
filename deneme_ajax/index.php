@@ -1,5 +1,5 @@
 <?php
 
 
-echo "deneme_ajax";
+echo "ajax denemesi";
 ?>
