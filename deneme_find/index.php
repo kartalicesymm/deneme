@@ -9,26 +9,29 @@
 </head>
 
 <body>
-<button id="deneme">deneme button</button>
+
 <div id="deneme"></div>
-<table id="myTable">
+<div  style="padding-top:15% ; padding-left:40% ">
+<table>
   <thead>
-    <td><input id="namem"  type="text"></td>
-    <td> <input id="sunamem" type="text"></td>
+    <td><input id="name"  type="text" placeholder="name..."></td>
+    <td> <input id="surname" type="text" placeholder="surname..."></td>
   </thead>
   <tbody id="myBody">
     <tr><td >seyma</td><td>kartal</td></tr>
     <tr><td>arge</td><td>deneme</td></tr>
   </tbody>
 <table>
+</div>
+
 <script>
 //search in namem
-const deneme=document.getElementById("namem")
-deneme.addEventListener("keydown", yaz);
-function yaz(){
+const name=document.getElementById("name")
+name.addEventListener("keydown",write_name);
+function write_name(){
     let td,td_text,filter;
-    //console.log(deneme.value);
-    filter=deneme.value;
+    //console.log(name.value);
+    filter=name.value;
     const table = document.getElementById("myBody");
     const tr=table.getElementsByTagName("tr");
     for (let i=0;i<tr.length;i++){
@@ -52,12 +55,12 @@ function yaz(){
 
 
 //search in surnamem
-const deneme=document.getElementById("sunamem")
-deneme.addEventListener("keydown", yaz);
-function yaz(){
+const surname=document.getElementById("surname")
+surname.addEventListener("keydown", write_surname);
+function write_surname(){
     let td,td_text,filter;
-    //console.log(deneme.value);
-    filter=deneme.value;
+    //console.log(surname.value);
+    filter=surname.value;
     const table = document.getElementById("myBody");
     const tr=table.getElementsByTagName("tr");
     for (let i=0;i<tr.length;i++){
