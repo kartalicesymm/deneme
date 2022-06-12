@@ -9,11 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
          $.ajax({
-        url : index.php,
-        type: GET,
-        data : form_data
-    }).done(function(response){ //
-        alert(form_data);
+        url : 'deneme.php' ,
+        type: 'GET',
+        data : 'form_data',
+        success: function(response){ 
+        console.log(response.deneme);
+        },
+        error: function(e){ 
+        console.log(e);
+        }
     });
     </script>
     <meta charset="UTF-8">
