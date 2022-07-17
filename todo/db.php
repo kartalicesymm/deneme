@@ -1,7 +1,7 @@
 <?php
-$dns='localhost';
-$port=3307;
-$dbname='test';
-$username= 'root';
-$password='';
+define('DNS','localhost');
+define('PORT',3307);
+define('DBNAME', 'test');
+define('USERNAME','root');
+define('PASSWORD','');
 ?>

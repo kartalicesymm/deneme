@@ -1,23 +1,27 @@
 <?php
 error_reporting(1);
 include 'db.php';
-Class Dbconnect{
-    public function __construct($dns,$port,$dbname ,$username , $password){
-        try {
-            $dbh = new PDO('mysql:host='.$dns.';port='.$port.';dbname='.$dbname ,$username , $password);
+
+function dbconnect(){
+
+    try {
+            $dbh = new PDO('mysql:host='. DNS .';port='.PORT.';dbname='.TEST ,USERNAME , PASSWORD);
             echo "<script>console.log('bağlanti basarili..')</script>";
         }catch (PDOException $e) {
             echo $e->getMessage();
-         }
-    }
-    public function todo(){
-        $q=$dbh->query('select title, content from todo');
-        $d=$q->fetchAll(PDO::FETCH_ASSOC);
+        }
 
-    }
-}
-$db= new Dbconnect($dns,$port,$dbname ,$username , $password);
-$db->todo();
+    $result =$dbh->query('select * from todo ');
+    $result=$result->fetchAll(PDO::FETCH_ASSOC);
+    print_r($result) ;
+    $dbh=null;
+    return $result;
+}   
+// echo '<pre>';
+dbconnect();
+
+
+
 
 
 
